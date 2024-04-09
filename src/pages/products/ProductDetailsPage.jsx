@@ -4,6 +4,7 @@ import { Link, useParams, useRouteLoaderData } from "react-router-dom";
 import { productActions } from "../../store/productSlice";
 import { cartActions } from "../../store/cartSlice";
 import { ProductRating } from "../../components/Rating";
+import JsonDisplay from "../../components/JsonDisplay";
 
 const ProductDetailsPage = () => {
   const [product, setProduct] = useState({});
@@ -26,7 +27,6 @@ const ProductDetailsPage = () => {
   const data = useRouteLoaderData("products");
   const { productId, category } = useParams();
   const products = useSelector((state) => state.product.products);
-  // const allProducts = useSelector((state) => state.product.allProducts);
 
   console.log(product);
 
@@ -120,23 +120,19 @@ const ProductDetailsPage = () => {
           <h1 className="text-gray-800 text-xl sml:text-2xl lg:text-3xl font-semibold text-justify sml:text-left">
             {product?.itemTitle}
           </h1>
-          <div className="flex space-x-3 text-2xl">
+          <p className="text-justify md:text-left">{`${product?.itemDescription?.split(".")[0]}.`}</p>
+          <h6 className="text-primary">
+            Special Price :  {`${product?.discountPercentage} % Off`}
+          </h6>
+          {/* <h5></h5> */}
+          <div className="flex space-x-3 text-2xl items-baseline">
             <span>{`₹${product?.discountPrice}`}</span>
-            <span className="line-through text-gray-400">
+            <span className="line-through text-gray-400 text-lg ">
               {`₹${product?.actualPrice}`}
             </span>
           </div>
 
-          <div className="space-y-2">
-            <h2 className="text-base md:text-lg font-medium"> Key features</h2>
-            <div className="text-sm md:text-base px-5">
-              <li>Newest technology</li>
-              <li>Best in class components</li>
-              <li>Dimensions -69.5 x 75.0 x 169.0</li>
-              <li>Maintenance free</li>
-              <li> 12 years warranty</li>
-            </div>
-          </div>
+          <JsonDisplay data={product?.highlights} />
 
           <div className="flex flex-wrap sml:flex-nowrap border-b pb-4 gap-5 justify-center sml:justify-start">
             <div className="border flex">

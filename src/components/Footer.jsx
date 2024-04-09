@@ -1,10 +1,11 @@
 import React from "react";
-import footerImg1 from "../assets/img/footer-img1.svg";
+// import footerImg1 from "../assets/img/footer-img1.svg";
+import footerImg1 from "../assets/img/vjp_logo_color.png";
 import footerImg2 from "../assets/img/footer-img2.png";
 
 const Footer = () => {
   return (
-    <footer className="text-primary w-full bg-white border-t">
+    <footer className="text-primary w-full bg-gray-500/20 border-t">
       <section
         className="flex flex-wrap sml:justify-between 
       px-10 py-12 2xl:container mx-auto"
@@ -13,7 +14,7 @@ const Footer = () => {
           <img
             src={footerImg1}
             alt=""
-            className="h-[60%] lg:h-1/2 w-[70%] lg:w-1/2 transform md:-translate-y-10 lg:-translate-y-8 mx-auto md:mx-0"
+            className="h-[60%] lg:h-1/2 w-60 transform md:-translate-y-10 lg:-translate-y-8 mx-auto md:mx-0 object-contain"
           />
         </div>
         <div
@@ -54,10 +55,12 @@ const Footer = () => {
         </div>
       </section>
       <section className="bg-ternary px-10 py-5 text-[#9CA7AA] text-sm ">
-        <div className="2xl:container mx-auto flex flex-wrap md:flex-nowrap
-        justify-center md:justify-between gap-5">
+        <div
+          className="2xl:container mx-auto flex flex-wrap md:flex-nowrap
+        justify-center md:justify-between gap-5"
+        >
           <h6 className="w-full md:1/2 text-center md:text-left">
-            © 2023 Electronic Store. Powered by Electronic Store
+            © 2024 All rights resevered to VJP Enterprises
           </h6>
           <img src={footerImg2} alt="" className="" />
         </div>

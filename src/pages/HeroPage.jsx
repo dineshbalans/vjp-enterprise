@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import heroImage from "../assets/heroPage/hero-tile5.png";
 import supportTeam from "../assets/heroPage/support-team.png";
-import vjpLogo from "../assets/img/vjp_logo.png";
+import vjpLogo from "../assets/img/vjp_logo_color.png";
 import { ReviewStar } from "../components/Rating";
 import {
   benefitItems,
@@ -94,17 +94,22 @@ const HeroPage = () => {
             ))}
           </div>
         </div>
+        <Adtiles style="mt-6 md:mt-48 lg:mt-28 mb-16" />
         <div
-          className="bg-white text-center border border-gray-300 mt-6 md:mt-48 lg:mt-28 mb-16 py-16 
+          className="bg-white text-center border border-gray-300 mb-16 py-16 
         flex flex-wrap justify-center items-center"
         >
           {allProducts.slice(1).map(({ id, title, items, category }) => (
             <div
-              className="uppercase w-1/2 sml:w-1/3 mdl:w-1/4 py-3 h-full space-y-3"
+              className="uppercase w-1/2 sml:w-1/3 mdl:w-1/4 pb-3 h-full space-y-3"
               key={id}
             >
               <div className="h-80 w-full p-4 flex justify-center items-center">
-                <img className="object-contain" src={items[0].itemImage[0]} alt="" />
+                <img
+                  className="object-contain"
+                  src={items[0].itemImage[0]}
+                  alt=""
+                />
               </div>
               <div>
                 <Link
@@ -120,8 +125,8 @@ const HeroPage = () => {
             </div>
           ))}
         </div>
-        <Adtiles />
-        <div className="flex flex-wrap lg:flex-nowrap  w-full justify-between gap-12 lgl:gap-4 mb-16">
+
+        <div className="flex flex-wrap lg:flex-nowrap hidden w-full justify-between gap-12 lgl:gap-4 mb-16">
           {deal49Items.map(({ id, bgColor, imgURL, title }) => (
             <div
               key={id}

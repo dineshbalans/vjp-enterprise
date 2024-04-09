@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="text-white hidden lg:block ">
-      <section className="bg-secondary p-2  font-montserrat">
+      <section className="bg-secondary p-2 text-[#f3ff48] font-montserrat">
         <div
           className="2xl:container mx-auto flex justify-between items-center px-5
         lg:text-sm lgl:text-base "
@@ -32,7 +32,7 @@ const Header = () => {
             <img
               src={logo}
               alt="tronmart_logo"
-              className="scale-110 cursor-pointer"
+              className="cursor-pointer object-contain w-48"
               onClick={() => navigate("/")}
             />
           </div>

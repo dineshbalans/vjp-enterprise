@@ -30,10 +30,12 @@ export const Adtile2 = () => {
   );
 };
 
-export const Adtiles = () => {
+export const Adtiles = ({ style }) => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-wrap mdl:flex-nowrap justify-between mb-16 w-full gap-6 md:gap-2">
+    <div
+      className={`flex flex-wrap mdl:flex-nowrap justify-between mb-16 w-full gap-6 md:gap-2 ${style}`}
+    >
       {adTiles.map(({ id, adTileURL, adURL }) => (
         <img
           key={id}
