@@ -5,6 +5,7 @@ import { StarRating } from "./Rating";
 import { cartActions } from "../store/cartSlice";
 import { useDispatch } from "react-redux";
 import { calculateDiscount } from "../utils/helperFunctions";
+import { useProgressiveImage } from "../hooks/useProgressiveImage";
 
 const ProductList = ({
   cardSize,
@@ -19,7 +20,7 @@ const ProductList = ({
 }) => {
   const dispatch = useDispatch();
   const addToCartHandler = () => {
-    const price = discountPrice
+    const price = discountPrice;
     // .replace(/,/g, "").slice(1);
     const cartData = {
       id: itemId,
@@ -39,7 +40,7 @@ const ProductList = ({
       }
     >
       <div
-        style={{ backgroundImage: `url(${itemImage[0]})` }}
+        style={{ backgroundImage: `url(${useProgressiveImage(itemImage[0])})` }}
         className="p-4 bg-no-repeat bg-cover  bg-center -z-50 h-60 sml:h-72"
       >
         <div className="flex">

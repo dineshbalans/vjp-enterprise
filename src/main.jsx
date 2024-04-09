@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createHashRouter,
+} from "react-router-dom";
 import Rootlayout from "./pages/Rootlayout.jsx";
 import HeroPage from "./pages/HeroPage.jsx";
 
@@ -23,7 +27,7 @@ import GiftCardsPage from "./pages/GiftCardsPage";
 // import App from "./App.jsx";
 // import { auth, db, provider } from "../src/config/Firebase.jsx";
 
-const routes = createBrowserRouter([
+const routes = createHashRouter([
   {
     path: "/",
     id: "products",
