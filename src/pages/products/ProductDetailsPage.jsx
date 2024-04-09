@@ -174,8 +174,8 @@ const ProductDetailsPage = () => {
           </h4>
         </div>
       </div>
-      <div className="space-y-2">
-        <h1 className="text-gray-500 text-lg">Product Description: </h1>
+      <div className="space-y-2 w-[85%] mx-auto">
+        <h1 className="text-gray-500 text-lg font-semibold">Product Description: </h1>
         <p className="text-justify md:text-left">{product?.itemDescription}</p>
       </div>
       {/* <ProductRating
