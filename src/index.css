@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body leading-6 bg-[#F7FBFC];
+  }
+
+  .input {
+    @apply border p-3 focus:outline-dotted focus:text-primary w-full rounded-md
+    placeholder:text-gray-500;
+  }
+
+  .inputError {
+    @apply text-red-600 placeholder:text-red-600 border-red-600 input;
+  }
+
+  .inputTitle {
+    @apply text-2xl font-semibold text-ternary py-6 flex;
+  }
+
+  .title {
+    @apply text-3xl font-semibold text-ternary;
+  }
+
+  .paginateBtn {
+    @apply bg-white text-primary px-3 py-1 border border-primary
+    hover:bg-primary hover:text-white transition-all ease-linear;
+  }
+  .paginateBtnDisabled {
+    @apply bg-white disabled:cursor-not-allowed text-primary/50
+    border border-primary/40  px-3 py-1;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-show::-webkit-scrollbar {
+  display: inline-block;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a7c7ec;
+  border: none;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #62a2eb;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0573f0;
+}
