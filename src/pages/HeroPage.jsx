@@ -97,14 +97,14 @@ const HeroPage = () => {
         <Adtiles style="mt-6 md:mt-48 lg:mt-28 mb-16" />
         <div
           className="bg-white text-center border-gray-300 mb-16 py-5 md:py-16 
-        flex flex-wrap justify-center items-center gap-3 "
+        flex flex-wrap justify-center  gap-3"
         >
           {allProducts.slice(1).map(({ id, title, items, category }) => (
             <div
-              className="uppercase w-[48%] sml:w-[31%] mdl:w-[23%] pb-3 flex flex-grow flex-col space-y-3 border"
+              className="uppercase w-[47%] sm:w-[48%] sml:w-[31%] mdl:w-[23%] pb-3 flex flex-col justify-between space-y-3 border"
               key={id}
             >
-              <div className="h-80 w-full p-4 flex justify-center items-center">
+              <div className="h-44 md:h-80 w-full p-4 flex justify-center items-center">
                 <img
                   className="object-contain"
                   src={items[0].itemImage[0]}
