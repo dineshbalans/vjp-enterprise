@@ -96,12 +96,12 @@ const HeroPage = () => {
         </div>
         <Adtiles style="mt-6 md:mt-48 lg:mt-28 mb-16" />
         <div
-          className="bg-white text-center  border-gray-300 mb-16 py-16 
-        flex flex-wrap justify-center items-center gap-3"
+          className="bg-white text-center border-gray-300 mb-16 py-5 md:py-16 
+        flex flex-wrap justify-center items-center gap-3 "
         >
           {allProducts.slice(1).map(({ id, title, items, category }) => (
             <div
-              className="uppercase w-1/2 sml:w-1/3 mdl:w-[23%] pb-3 h-full space-y-3 border"
+              className="uppercase w-[48%] sml:w-[31%] mdl:w-[23%] pb-3 flex flex-grow flex-col space-y-3 border"
               key={id}
             >
               <div className="h-80 w-full p-4 flex justify-center items-center">

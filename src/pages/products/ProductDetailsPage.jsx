@@ -91,7 +91,7 @@ const ProductDetailsPage = () => {
               <div className="border-t-2 border-primary w-40 h-40 rounded-full animate-spin" />
             </h1>
           )}
-          <ul className="absolute z-10 bottom-0 flex flex-col sml:flex-row right-0 sml:right-auto gap-2 pr-4 sml:pr-0  sml:pb-4 h-full justify-center items-end py-2">
+          <ul className="absolute z-10 bottom-0 flex gap-2 pb-4 h-full justify-center items-end py-2">
             {product?.itemImage?.map((image, index) => (
               <li
                 key={index}
@@ -104,6 +104,7 @@ const ProductDetailsPage = () => {
                   src={image}
                   alt=""
                   className="object-cover h-full w-full object-center absolute -z-20"
+                  loading="lazy"
                 />
               </li>
             ))}
@@ -120,9 +121,11 @@ const ProductDetailsPage = () => {
           <h1 className="text-gray-800 text-xl sml:text-2xl lg:text-3xl font-semibold text-justify sml:text-left">
             {product?.itemTitle}
           </h1>
-          <p className="text-justify md:text-left">{`${product?.itemDescription?.split(".")[0]}.`}</p>
+          <p className="text-justify md:text-left">{`${
+            product?.itemDescription?.split(".")[0]
+          }.`}</p>
           <h6 className="text-primary">
-            Special Price :  {`${product?.discountPercentage} % Off`}
+            Special Price : {`${product?.discountPercentage} % Off`}
           </h6>
           {/* <h5></h5> */}
           <div className="flex space-x-3 text-2xl items-baseline">
@@ -175,7 +178,9 @@ const ProductDetailsPage = () => {
         </div>
       </div>
       <div className="space-y-2 w-[85%] mx-auto">
-        <h1 className="text-gray-500 text-lg font-semibold">Product Description: </h1>
+        <h1 className="text-gray-500 text-lg font-semibold">
+          Product Description:{" "}
+        </h1>
         <p className="text-justify md:text-left">{product?.itemDescription}</p>
       </div>
       {/* <ProductRating
