@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/svg/logo.svg";
+import logo from "../assets/img/vjp_logo.png"
 import { menuBarItems } from "../data/heroData";
 import { TiShoppingCart } from "react-icons/ti";
 import { MdClose } from "react-icons/md";
@@ -40,7 +40,7 @@ const Menubar = () => {
           <img
             src={logo}
             alt="tronmart_logo"
-            className="scale-110  cursor-pointer"
+            className=" w-48 cursor-pointer object-contain"
             onClick={() => navigate("/")}
           />
         </div>
